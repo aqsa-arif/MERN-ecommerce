@@ -23,9 +23,9 @@ router.put('/update-product/:id', registeredUser, adminaccess,formidable() ,upda
 
 router.delete('/delete-product/:id', registeredUser, adminaccess, deleteProductController );
 
-router.get('/all-products', registeredUser, allProductController );
+router.get('/all-products', allProductController );
 
-router.get('/single-product/:slug', registeredUser, singleProductController );
+router.get('/single-product/:slug', singleProductController );
 
 router.get('/product-photo/:id',productPhotoController );
 
