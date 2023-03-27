@@ -11,9 +11,9 @@ const router = express.Router()
 
 router.post('/create-category', registeredUser, adminaccess, createCategoryController);
 
-router.get('/single-category/:slug', registeredUser, singlecategoryController);
+router.get('/single-category/:slug', singlecategoryController);
 
-router.get('/all-category', registeredUser,  allcategoryController );
+router.get('/all-category', allcategoryController );
 
 router.put('/update-category/:id', registeredUser, adminaccess, updatecategoryController );
 
