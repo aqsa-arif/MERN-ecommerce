@@ -18,7 +18,7 @@ dbConnection();
 // Middlewares
 app.use(express.json())
 app.use(cors())
-app.use(express.static('../frontend/build'))
+app.use(express.static('./client/build'))
 
 app.use('/api/auth', authRoutes )
 app.use('/api/category', categoryRoutes )
@@ -27,7 +27,7 @@ app.use('/api/paymentIntegration', paymentRoutes  )
 
 
 app.use('*', (req, res) => {
-    res.sendFile("../frontend/build/index.html'")
+    res.sendFile("./client/build/index.html'")
 })
 
 app.listen(port, () => {
